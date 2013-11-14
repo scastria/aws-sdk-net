@@ -24,7 +24,7 @@ using System;
 using System.IO;
 using Amazon.Runtime;
 using System.Collections;
-using Amazon.S3;
+//using Amazon.S3;
 using System.Diagnostics;
 
 namespace Amazon.Runtime.Internal.Util

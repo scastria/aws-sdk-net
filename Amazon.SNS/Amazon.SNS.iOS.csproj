@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{36B2A1FF-6D36-454D-B880-7CEE8D992C9E}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Amazon.SNS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Amazon.SNS</AssemblyName>
+    <ReleaseVersion>0.2</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;WINDOWS_PHONE;SILVERLIGHT;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>WINDOWS_PHONE;SILVERLIGHT;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Amazon.SimpleNotificationService\" />
+    <Folder Include="Amazon.Runtime\" />
+    <Folder Include="Amazon.Util\" />
+    <Folder Include="ThirdParty\" />
+    <Folder Include="Amazon.MissingTypes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="..\AWSSDK_DotNet45\Amazon.SimpleNotificationService\AmazonSimpleNotificationServiceClient.cs">
+      <Link>Amazon.SimpleNotificationService\AmazonSimpleNotificationServiceClient.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet45\Amazon.SimpleNotificationService\IAmazonSimpleNotificationService.cs">
+      <Link>Amazon.SimpleNotificationService\IAmazonSimpleNotificationService.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\AmazonSimpleNotificationServiceConfig.cs">
+      <Link>Amazon.SimpleNotificationService\AmazonSimpleNotificationServiceConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\AmazonSimpleNotificationServiceException.cs">
+      <Link>Amazon.SimpleNotificationService\AmazonSimpleNotificationServiceException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\IAmazonSimpleNotificationService.Extensions.cs">
+      <Link>Amazon.SimpleNotificationService\IAmazonSimpleNotificationService.Extensions.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\ServiceEnumerations.cs">
+      <Link>Amazon.SimpleNotificationService\ServiceEnumerations.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\AddPermissionRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\AddPermissionRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\AddPermissionResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\AddPermissionResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\AuthorizationErrorException.cs">
+      <Link>Amazon.SimpleNotificationService\Model\AuthorizationErrorException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ConfirmSubscriptionRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ConfirmSubscriptionRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ConfirmSubscriptionResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ConfirmSubscriptionResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ConfirmSubscriptionResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ConfirmSubscriptionResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\CreatePlatformApplicationRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\CreatePlatformApplicationRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\CreatePlatformApplicationResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\CreatePlatformApplicationResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\CreatePlatformApplicationResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\CreatePlatformApplicationResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\CreatePlatformEndpointRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\CreatePlatformEndpointRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\CreatePlatformEndpointResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\CreatePlatformEndpointResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\CreatePlatformEndpointResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\CreatePlatformEndpointResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\CreateTopicRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\CreateTopicRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\CreateTopicResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\CreateTopicResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\CreateTopicResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\CreateTopicResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\DeleteEndpointRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\DeleteEndpointRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\DeleteEndpointResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\DeleteEndpointResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\DeletePlatformApplicationRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\DeletePlatformApplicationRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\DeletePlatformApplicationResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\DeletePlatformApplicationResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\DeleteTopicRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\DeleteTopicRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\DeleteTopicResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\DeleteTopicResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Endpoint.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Endpoint.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\EndpointDisabledException.cs">
+      <Link>Amazon.SimpleNotificationService\Model\EndpointDisabledException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetEndpointAttributesRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetEndpointAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetEndpointAttributesResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetEndpointAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetEndpointAttributesResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetEndpointAttributesResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetPlatformApplicationAttributesRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetPlatformApplicationAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetPlatformApplicationAttributesResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetPlatformApplicationAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetPlatformApplicationAttributesResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetPlatformApplicationAttributesResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetSubscriptionAttributesRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetSubscriptionAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetSubscriptionAttributesResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetSubscriptionAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetSubscriptionAttributesResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetSubscriptionAttributesResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetTopicAttributesRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetTopicAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetTopicAttributesResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetTopicAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\GetTopicAttributesResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\GetTopicAttributesResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\InternalErrorException.cs">
+      <Link>Amazon.SimpleNotificationService\Model\InternalErrorException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\InvalidParameterException.cs">
+      <Link>Amazon.SimpleNotificationService\Model\InvalidParameterException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListEndpointsByPlatformApplicationRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListEndpointsByPlatformApplicationRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListEndpointsByPlatformApplicationResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListEndpointsByPlatformApplicationResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListEndpointsByPlatformApplicationResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListEndpointsByPlatformApplicationResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListPlatformApplicationsRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListPlatformApplicationsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListPlatformApplicationsResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListPlatformApplicationsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListPlatformApplicationsResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListPlatformApplicationsResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListSubscriptionsByTopicRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListSubscriptionsByTopicRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListSubscriptionsByTopicResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListSubscriptionsByTopicResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListSubscriptionsByTopicResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListSubscriptionsByTopicResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListSubscriptionsRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListSubscriptionsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListSubscriptionsResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListSubscriptionsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListSubscriptionsResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListSubscriptionsResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListTopicsRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListTopicsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListTopicsResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListTopicsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\ListTopicsResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\ListTopicsResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\NotFoundException.cs">
+      <Link>Amazon.SimpleNotificationService\Model\NotFoundException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\PlatformApplication.cs">
+      <Link>Amazon.SimpleNotificationService\Model\PlatformApplication.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\PlatformApplicationDisabledException.cs">
+      <Link>Amazon.SimpleNotificationService\Model\PlatformApplicationDisabledException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\PublishRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\PublishRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\PublishResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\PublishResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\PublishResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\PublishResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\RemovePermissionRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\RemovePermissionRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\RemovePermissionResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\RemovePermissionResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SetEndpointAttributesRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SetEndpointAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SetEndpointAttributesResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SetEndpointAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SetPlatformApplicationAttributesRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SetPlatformApplicationAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SetPlatformApplicationAttributesResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SetPlatformApplicationAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SetSubscriptionAttributesRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SetSubscriptionAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SetSubscriptionAttributesResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SetSubscriptionAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SetTopicAttributesRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SetTopicAttributesRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SetTopicAttributesResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SetTopicAttributesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SubscribeRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SubscribeRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SubscribeResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SubscribeResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SubscribeResult.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SubscribeResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Subscription.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Subscription.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\SubscriptionLimitExceededException.cs">
+      <Link>Amazon.SimpleNotificationService\Model\SubscriptionLimitExceededException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Topic.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Topic.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\TopicLimitExceededException.cs">
+      <Link>Amazon.SimpleNotificationService\Model\TopicLimitExceededException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\UnsubscribeRequest.cs">
+      <Link>Amazon.SimpleNotificationService\Model\UnsubscribeRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\UnsubscribeResponse.cs">
+      <Link>Amazon.SimpleNotificationService\Model\UnsubscribeResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\AddPermissionRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\AddPermissionRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\AddPermissionResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\AddPermissionResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ConfirmSubscriptionRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ConfirmSubscriptionRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ConfirmSubscriptionResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ConfirmSubscriptionResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreatePlatformApplicationRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreatePlatformApplicationRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreatePlatformApplicationResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreatePlatformApplicationResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreatePlatformEndpointRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreatePlatformEndpointRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreatePlatformEndpointResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreatePlatformEndpointResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreateTopicRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreateTopicRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreateTopicResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\CreateTopicResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeleteEndpointRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeleteEndpointRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeleteEndpointResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeleteEndpointResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeletePlatformApplicationRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeletePlatformApplicationRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeletePlatformApplicationResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeletePlatformApplicationResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeleteTopicRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeleteTopicRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeleteTopicResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\DeleteTopicResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\EndpointUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\EndpointUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetEndpointAttributesRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetEndpointAttributesRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetEndpointAttributesResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetEndpointAttributesResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetPlatformApplicationAttributesRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetPlatformApplicationAttributesRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetPlatformApplicationAttributesResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetPlatformApplicationAttributesResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetSubscriptionAttributesRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetSubscriptionAttributesRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetSubscriptionAttributesResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetSubscriptionAttributesResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetTopicAttributesRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetTopicAttributesRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetTopicAttributesResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\GetTopicAttributesResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListEndpointsByPlatformApplicationRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListEndpointsByPlatformApplicationRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListEndpointsByPlatformApplicationResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListEndpointsByPlatformApplicationResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListPlatformApplicationsRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListPlatformApplicationsRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListPlatformApplicationsResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListPlatformApplicationsResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListSubscriptionsByTopicRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListSubscriptionsByTopicRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListSubscriptionsByTopicResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListSubscriptionsByTopicResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListSubscriptionsRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListSubscriptionsRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListSubscriptionsResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListSubscriptionsResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListTopicsRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListTopicsRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListTopicsResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\ListTopicsResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\PlatformApplicationUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\PlatformApplicationUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\PublishRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\PublishRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\PublishResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\PublishResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\RemovePermissionRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\RemovePermissionRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\RemovePermissionResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\RemovePermissionResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetEndpointAttributesRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetEndpointAttributesRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetEndpointAttributesResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetEndpointAttributesResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetPlatformApplicationAttributesRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetPlatformApplicationAttributesRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetPlatformApplicationAttributesResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetPlatformApplicationAttributesResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetSubscriptionAttributesRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetSubscriptionAttributesRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetSubscriptionAttributesResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetSubscriptionAttributesResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetTopicAttributesRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetTopicAttributesRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetTopicAttributesResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SetTopicAttributesResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SubscribeRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SubscribeRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SubscribeResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SubscribeResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SubscriptionUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\SubscriptionUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\TopicUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\TopicUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\UnsubscribeRequestMarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\UnsubscribeRequestMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\UnsubscribeResponseUnmarshaller.cs">
+      <Link>Amazon.SimpleNotificationService\Model\Internal\MarshallTransformations\UnsubscribeResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet45\Amazon.Runtime\AmazonWebServiceClient.cs">
+      <Link>Amazon.Runtime\AmazonWebServiceClient.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet45\Amazon.Runtime\Internal\AsyncRunner.cs">
+      <Link>Amazon.Runtime\Internal\AsyncRunner.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet45\Amazon.Runtime\Internal\EventStream.cs">
+      <Link>Amazon.Runtime\Internal\EventStream.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet45\Amazon.Runtime\Internal\WebRequestState.cs">
+      <Link>Amazon.Runtime\Internal\WebRequestState.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet45\Amazon.Runtime\Internal\Transform\HttpClientResponseData.cs">
+      <Link>Amazon.Runtime\Internal\Transform\HttpClientResponseData.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\AWSCredentials.cs">
+      <Link>Amazon.Runtime\AWSCredentials.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\AbstractWebServiceClient.cs">
+      <Link>Amazon.Runtime\AbstractWebServiceClient.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\AmazonClientException.cs">
+      <Link>Amazon.Runtime\AmazonClientException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\AmazonServiceException.cs">
+      <Link>Amazon.Runtime\AmazonServiceException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\AmazonUnmarshallingException.cs">
+      <Link>Amazon.Runtime\AmazonUnmarshallingException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\AmazonWebServiceRequest.cs">
+      <Link>Amazon.Runtime\AmazonWebServiceRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\AmazonWebServiceResponse.cs">
+      <Link>Amazon.Runtime\AmazonWebServiceResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\ClientConfig.cs">
+      <Link>Amazon.Runtime\ClientConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\ConstantClass.cs">
+      <Link>Amazon.Runtime\ConstantClass.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Enumerations.cs">
+      <Link>Amazon.Runtime\Enumerations.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\ExceptionHandler.cs">
+      <Link>Amazon.Runtime\ExceptionHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\PreRequestHandler.cs">
+      <Link>Amazon.Runtime\PreRequestHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\RequestHandler.cs">
+      <Link>Amazon.Runtime\RequestHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\ResponseHandler.cs">
+      <Link>Amazon.Runtime\ResponseHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\ResponseMetadata.cs">
+      <Link>Amazon.Runtime\ResponseMetadata.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\SignatureException.cs">
+      <Link>Amazon.Runtime\SignatureException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\StreamUploadProgressArgs.cs">
+      <Link>Amazon.Runtime\StreamUploadProgressArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\AmazonWebServiceRequest.cs">
+      <Link>Amazon.Runtime\Internal\AmazonWebServiceRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\AsyncResult.cs">
+      <Link>Amazon.Runtime\Internal\AsyncResult.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\DefaultRequest.cs">
+      <Link>Amazon.Runtime\Internal\DefaultRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\ErrorResponse.cs">
+      <Link>Amazon.Runtime\Internal\ErrorResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\IRequest.cs">
+      <Link>Amazon.Runtime\Internal\IRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\IRequestData.cs">
+      <Link>Amazon.Runtime\Internal\IRequestData.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\IRequestEvents.cs">
+      <Link>Amazon.Runtime\Internal\IRequestEvents.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Auth\AWS3Signer.cs">
+      <Link>Amazon.Runtime\Internal\Auth\AWS3Signer.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Auth\AWS4Signer.cs">
+      <Link>Amazon.Runtime\Internal\Auth\AWS4Signer.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Auth\AbstractAWSSigner.cs">
+      <Link>Amazon.Runtime\Internal\Auth\AbstractAWSSigner.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Auth\CloudFrontSigner.cs">
+      <Link>Amazon.Runtime\Internal\Auth\CloudFrontSigner.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Auth\QueryStringSigner.cs">
+      <Link>Amazon.Runtime\Internal\Auth\QueryStringSigner.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Auth\SignatureException.cs">
+      <Link>Amazon.Runtime\Internal\Auth\SignatureException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Transform\ErrorResponseUnmarshaller.cs">
+      <Link>Amazon.Runtime\Internal\Transform\ErrorResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Transform\HttpWebRequestResponseData.cs">
+      <Link>Amazon.Runtime\Internal\Transform\HttpWebRequestResponseData.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Transform\IMarshaller.cs">
+      <Link>Amazon.Runtime\Internal\Transform\IMarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Transform\IResponseUnmarshaller.cs">
+      <Link>Amazon.Runtime\Internal\Transform\IResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Transform\IUnmarshaller.cs">
+      <Link>Amazon.Runtime\Internal\Transform\IUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Transform\IWebResponseData.cs">
+      <Link>Amazon.Runtime\Internal\Transform\IWebResponseData.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Transform\JsonErrorResponseUnmarshaller.cs">
+      <Link>Amazon.Runtime\Internal\Transform\JsonErrorResponseUnmarshaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Transform\JsonUnmarshallerContext.cs">
+      <Link>Amazon.Runtime\Internal\Transform\JsonUnmarshallerContext.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Transform\ResponseUnmarshallers.cs">
+      <Link>Amazon.Runtime\Internal\Transform\ResponseUnmarshallers.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Transform\SimpleTypeUnmarhaller.cs">
+      <Link>Amazon.Runtime\Internal\Transform\SimpleTypeUnmarhaller.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Transform\UnmarshallerContext.cs">
+      <Link>Amazon.Runtime\Internal\Transform\UnmarshallerContext.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\DecryptStream.cs">
+      <Link>Amazon.Runtime\Internal\Util\DecryptStream.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\DecryptionWrapper.cs">
+      <Link>Amazon.Runtime\Internal\Util\DecryptionWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\Dispatcher.cs">
+      <Link>Amazon.Runtime\Internal\Util\Dispatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\EncryptStream.cs">
+      <Link>Amazon.Runtime\Internal\Util\EncryptStream.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\EncryptUploadPartStream.cs">
+      <Link>Amazon.Runtime\Internal\Util\EncryptUploadPartStream.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\EncryptionWrapper.cs">
+      <Link>Amazon.Runtime\Internal\Util\EncryptionWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\Extensions.cs">
+      <Link>Amazon.Runtime\Internal\Util\Extensions.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\HashStream.cs">
+      <Link>Amazon.Runtime\Internal\Util\HashStream.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\Hashing.cs">
+      <Link>Amazon.Runtime\Internal\Util\Hashing.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\HashingWrapper.bcl.cs">
+      <Link>Amazon.Runtime\Internal\Util\HashingWrapper.bcl.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\HashingWrapper.cs">
+      <Link>Amazon.Runtime\Internal\Util\HashingWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\IDecryptionWrapper.cs">
+      <Link>Amazon.Runtime\Internal\Util\IDecryptionWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\IEncryptionWrapper.cs">
+      <Link>Amazon.Runtime\Internal\Util\IEncryptionWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\IHashingWrapper.cs">
+      <Link>Amazon.Runtime\Internal\Util\IHashingWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\Logger.Log4net.cs">
+      <Link>Amazon.Runtime\Internal\Util\Logger.Log4net.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\Logger.cs">
+      <Link>Amazon.Runtime\Internal\Util\Logger.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\Metrics.cs">
+      <Link>Amazon.Runtime\Internal\Util\Metrics.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\PartialWrapperStream.cs">
+      <Link>Amazon.Runtime\Internal\Util\PartialWrapperStream.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\ReadOnlyWrapperStream.cs">
+      <Link>Amazon.Runtime\Internal\Util\ReadOnlyWrapperStream.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\StringUtils.cs">
+      <Link>Amazon.Runtime\Internal\Util\StringUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Runtime\Internal\Util\WrapperStream.cs">
+      <Link>Amazon.Runtime\Internal\Util\WrapperStream.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_WP8\Amazon.Util\AWSSDKUtils.wp8.cs">
+      <Link>Amazon.Util\AWSSDKUtils.wp8.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_WP8\Amazon.Util\CryptoUtil.wp8.cs">
+      <Link>Amazon.Util\CryptoUtil.wp8.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Util\AWSSDKUtils.cs">
+      <Link>Amazon.Util\AWSSDKUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Util\CryptoUtil.cs">
+      <Link>Amazon.Util\CryptoUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Util\ICryptoUtil.cs">
+      <Link>Amazon.Util\ICryptoUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Util\PaginatedResource.cs">
+      <Link>Amazon.Util\PaginatedResource.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Util\PaginatedResourceFactory.cs">
+      <Link>Amazon.Util\PaginatedResourceFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Util\TypeWrapper.bcl.cs">
+      <Link>Amazon.Util\TypeWrapper.bcl.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\Amazon.Util\TypeWrapper.cs">
+      <Link>Amazon.Util\TypeWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_WP8\ThirdParty\MD5\MD5Core.cs">
+      <Link>ThirdParty\MD5\MD5Core.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_WP8\ThirdParty\MD5\MD5Managed.cs">
+      <Link>ThirdParty\MD5\MD5Managed.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\ThirdParty\Ionic.Zlib\Crc32.cs">
+      <Link>ThirdParty\Ionic.Zlib\Crc32.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\ThirdParty\Json\IJsonWrapper.cs">
+      <Link>ThirdParty\Json\IJsonWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\ThirdParty\Json\JsonData.cs">
+      <Link>ThirdParty\Json\JsonData.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\ThirdParty\Json\JsonException.cs">
+      <Link>ThirdParty\Json\JsonException.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\ThirdParty\Json\JsonMapper.cs">
+      <Link>ThirdParty\Json\JsonMapper.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\ThirdParty\Json\JsonReader.cs">
+      <Link>ThirdParty\Json\JsonReader.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\ThirdParty\Json\JsonWriter.cs">
+      <Link>ThirdParty\Json\JsonWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\ThirdParty\Json\Lexer.cs">
+      <Link>ThirdParty\Json\Lexer.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\ThirdParty\Json\ParserToken.cs">
+      <Link>ThirdParty\Json\ParserToken.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_WP8\Amazon.MissingTypes\IOrderedDictionary.cs">
+      <Link>Amazon.MissingTypes\IOrderedDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\RegionEndpoint.cs">
+      <Link>RegionEndpoint.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_WP8\AWSConfigs.wp8.cs">
+      <Link>AWSConfigs.wp8.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet45\AWSClientFactory.cs">
+      <Link>AWSClientFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet45\ServiceClients.cs">
+      <Link>ServiceClients.cs</Link>
+    </Compile>
+    <Compile Include="..\AWSSDK_DotNet35\AWSConfigs.cs">
+      <Link>AWSConfigs.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\AWSSDK_DotNet35\endpoints.xml">
+      <Link>endpoints.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
